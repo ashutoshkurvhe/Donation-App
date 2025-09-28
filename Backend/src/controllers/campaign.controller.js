@@ -172,7 +172,7 @@ const toggleCampaignStatus = async (req, res, next) => {
 };
 
 // Donate to campaign
-const donateToCompaign = async (req, res, next) => {
+const donateToCampaign = async (req, res, next) => {
   try {
     const { amount } = req.body;
     const campaign = await Campaign.findById(req.params.id);
@@ -209,5 +209,5 @@ module.exports = {
   searchCampaigns,
   campaignStats,
   toggleCampaignStatus,
-  donateToCompaign,
+  donateToCampaign,
 };

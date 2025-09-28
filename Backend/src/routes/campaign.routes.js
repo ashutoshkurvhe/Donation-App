@@ -10,7 +10,7 @@ const {
   searchCampaigns,
   campaignStats,
   toggleCampaignStatus,
-  donateToCompaign,
+  donateToCampaign,
 } = require("../controllers/campaign.controller");
 const {
   authenticate,
@@ -155,7 +155,7 @@ router.post(
       .withMessage("Donation amount must be at least 1"),
   ],
   validateRequest,
-  donateToCompaign
+  donateToCampaign
 );
 
 router.delete(
